@@ -1,0 +1,34 @@
+-improve portability
+-add dot1q, dot1p
+-add some more layer3, layer4 protocols
+
+ struct ICMP_HEADER {
+        unsigned char icmp_type;
+        unsigned char icmp_code;
+        unsigned short int icmp_cksum;
+        unsigned short int icmp_id;
+        unsigned short int icmp_seq;
+ }; 
+
+ struct UDP_HEADER {
+        unsigned short int uh_sport;
+        unsigned short int uh_dport;
+        unsigned short int uh_len;
+        unsigned short int uh_check;
+ };
+
+ struct TCP_HEADER {
+        unsigned short int th_sport;
+        unsigned short int th_dport;
+        unsigned int th_seq;
+        unsigned int th_ack;
+        unsigned char th_x2:4, th_off:4;
+        unsigned char th_flags;
+        unsigned short int th_win;
+        unsigned short int th_sum;
+        unsigned short int th_urp;
+ };
+
+
+                                                                                
+
